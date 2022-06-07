@@ -9,16 +9,4 @@ import { LoginServiceService } from './service/login-service.service';
 export class AppComponent {
   title = 'frontend-dictonary';
 
-  usuario = {
-    login: '',
-    password: ''
-  };
-
-  constructor(private loginService: LoginServiceService){
-
-  }
-
-  public login(){
-    this.loginService.login(this.usuario);
-  }
 }
