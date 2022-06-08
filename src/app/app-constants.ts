@@ -8,8 +8,8 @@ export class AppConstants {
     return this.baseServidor + "auth/signin"
   }
 
-  // public static get baseUrl(): string {
-  //   return this.baseServidor + "api-dictionary/"
-  // }
+  public static get baseUrl(): string {
+    return this.baseServidor
+  }
 
 }
