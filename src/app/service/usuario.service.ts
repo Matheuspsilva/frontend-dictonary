@@ -13,7 +13,7 @@ export class UsuarioService {
   }
 
   getUsuarioList(): Observable<any>{
-    return this.http.get<any>(AppConstants.baseUrl);
+    return this.http.get<any>(AppConstants.baseUrl + "users");
   }
 
 }
