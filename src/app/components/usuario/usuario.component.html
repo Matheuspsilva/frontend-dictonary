@@ -11,6 +11,7 @@
         <td>{{ usuario.id }}</td>
         <td>{{ usuario.name }}</td>
         <td>{{ usuario.login }}</td>
+        <td> <button (click)="deletarUsuario(usuario.id)" class="btn btn-danger">Deletar</button></td>
       </tr>
 
     </tbody>
