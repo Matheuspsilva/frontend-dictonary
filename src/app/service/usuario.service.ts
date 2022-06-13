@@ -20,4 +20,8 @@ export class UsuarioService {
     return this.http.delete<any>(AppConstants.baseUrl + "user/" + id);
   }
 
+  getUsuarioAuth(): Observable<any>{
+    return this.http.get<any>(AppConstants.baseUrl + "user/me");
+  }
+
 }

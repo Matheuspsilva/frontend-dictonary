@@ -1,0 +1,16 @@
+<div class="md-form">
+  <input type="search" [(ngModel)]="searchText" placeholder="Search text">
+  <button type="button" class="btn btn-primary" style="border:none;height:30px" (click)="searchFilter()">
+    Search
+  </button>
+</div>
+
+<div class="mt-4">
+  <ul *ngFor="let palavra of palavras" class="list-group mt-1">
+    <li class="list-group-item">{{ palavra}}
+      <button class="btn btn-primary" (click)="onTap(palavra)">{{ palavra}}</button>
+    </li>
+
+  </ul>
+
+</div>

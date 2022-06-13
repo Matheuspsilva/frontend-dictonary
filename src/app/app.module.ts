@@ -10,12 +10,17 @@ import { ModuleWithProviders } from '@angular/compiler/src/core';
 import { LoginComponent } from './login/login.component';
 import { HttpInterceptorModule } from './service/header-interceptor.service';
 import { UsuarioComponent } from './components/usuario/usuario.component';
+import { WordComponent } from './components/word/word/word.component';
+import { SearchTextComponent } from './components/search/search-text/search-text.component';
+import { WordListComponent } from './components/wordList/word-list/word-list.component';
 
 export const appRouters: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: '', component: LoginComponent },
-  { path: 'usuarios', component: UsuarioComponent }
+  { path: 'usuarios', component: UsuarioComponent },
+  { path: 'palavra', component: WordComponent },
+  { path: 'palavras', component: WordListComponent }
 
 ];
 
@@ -26,7 +31,10 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     AppComponent,
     HomeComponent,
     LoginComponent,
-    UsuarioComponent
+    UsuarioComponent,
+    WordComponent,
+    SearchTextComponent,
+    WordListComponent
   ],
   imports: [
     BrowserModule,

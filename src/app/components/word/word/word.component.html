@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row mt-4">
+
+
+    <div class="col-lg-6 col-sm-12">
+
+      <div class="card" style="min-height: 400px; background-color: pink;">
+        <div class="card-body mx-auto d-flex">
+          <div class="row align-items-center">
+            <h2>{{ palavra.word }}</h2>
+            <h2>{{ palavra.phonetic }}</h2>
+
+          </div>
+        </div>
+      </div>
+
+      <h2 class="mt-4 mb-4">Meanings</h2>
+
+      <div *ngFor="let meanings of palavra.meanings">
+
+        <div class="card mx-auto">
+          <div class="card-header">
+            <h2 class="mb-0">
+                {{ meanings.partOfSpeech }}
+            </h2>
+          </div>
+
+          <div >
+            <div class="card-body">
+              <p *ngFor="let a of meanings.definitions">{{ a.definition }}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-lg-6 col-sm-12">
+
+    </div>
+
+
+</div>

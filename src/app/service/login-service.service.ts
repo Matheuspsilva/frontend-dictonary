@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { error } from '@angular/compiler/src/util';
 import { Injectable } from '@angular/core';
 import { AppConstants } from '../app-constants';
@@ -15,16 +15,18 @@ export class LoginServiceService {
 
   login(usuario){
     return this.http.post(AppConstants.baseLogin, JSON.stringify(usuario)).subscribe(data => {
+
+      //Retorno http
       var token = JSON.parse(JSON.stringify(data)).token.split(' ')[1];
 
       localStorage.setItem("token", token);
 
-      //console.info("Token: " + localStorage.getItem("token"));
+      console.info("Token: " + localStorage.getItem("token"));
 
       this.router.navigate(['home']);
     },
     error => {
-      console.error("Erro ao fazer login");
+      console.error(error);
       alert("Erro ao fazer login");
     }
     );
