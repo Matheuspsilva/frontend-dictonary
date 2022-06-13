@@ -25,4 +25,11 @@ export class WordService {
     return this.http.get<any>(AppConstants.baseUrl + "entries/en/" + word);
   }
 
+  getAccessedWords(): Observable<any>{
+    return this.http.get<any>(AppConstants.baseUrl + "user/me/history");
+  }
+
+  getFavoriteWords(): Observable<any>{
+    return this.http.get<any>(AppConstants.baseUrl + "user/me/favorites");
+  }
 }

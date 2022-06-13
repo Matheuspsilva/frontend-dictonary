@@ -13,6 +13,8 @@ import { UsuarioComponent } from './components/usuario/usuario.component';
 import { WordComponent } from './components/word/word/word.component';
 import { SearchTextComponent } from './components/search/search-text/search-text.component';
 import { WordListComponent } from './components/wordList/word-list/word-list.component';
+import { TabsModule } from 'ngx-bootstrap/tabs';
+import { TabsComponent } from './components/tabs/tabs.component';
 
 export const appRouters: Routes = [
   { path: 'home', component: HomeComponent },
@@ -34,7 +36,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     UsuarioComponent,
     WordComponent,
     SearchTextComponent,
-    WordListComponent
+    WordListComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     FormsModule,
     HttpClientModule,
     routes,
-    HttpInterceptorModule
+    HttpInterceptorModule,
+    TabsModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
