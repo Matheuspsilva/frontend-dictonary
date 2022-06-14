@@ -23,7 +23,7 @@ export class LoginServiceService {
 
       console.info("Token: " + localStorage.getItem("token"));
 
-      this.router.navigate(['home']);
+      this.router.navigate(['palavras']);
     },
     error => {
       console.error(error);
