@@ -2,13 +2,16 @@
   <tabset>
     <tab heading="History">
       <ul class="list-unstyled card-columns ml-1 mt-2">
-        <li *ngFor="let tabz of palavrasAcessadas">{{tabz.word}}</li>
+        <li *ngFor="let palavrasAcessada of palavrasAcessadas">{{palavrasAcessada.word}}</li>
 
       </ul>
     </tab>
 
     <tab heading="Favorites">
+      <ul class="list-unstyled card-columns ml-1 mt-2">
+        <li *ngFor="let palavraFavorita of palavrasFavoritas">{{palavraFavorita.word}}</li>
 
+      </ul>
     </tab>
 
   </tabset>

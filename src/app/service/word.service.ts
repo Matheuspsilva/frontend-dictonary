@@ -32,4 +32,12 @@ export class WordService {
   getFavoriteWords(): Observable<any>{
     return this.http.get<any>(AppConstants.baseUrl + "user/me/favorites");
   }
+
+  favoriteWord(word : String):Observable<any>{
+    return this.http.post<any>(AppConstants.baseUrl + "entries/en/" + word +"/favorite", {});
+  }
+
+  unfavoriteWord(word : String):Observable<any>{
+    return this.http.delete<any>(AppConstants.baseUrl + "entries/en/" + word +"/unfavorite", {});
+  }
 }
