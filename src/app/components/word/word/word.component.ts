@@ -32,10 +32,6 @@ export class WordComponent implements OnInit {
 
     });
 
-    this.wordService.getAccessedWords().subscribe(data => {
-      this.palavrasAcessadas = data.content
-      console.log(this.palavrasAcessadas)
-    });
 
     this.getFavoriteWords()
 
@@ -43,6 +39,17 @@ export class WordComponent implements OnInit {
 
   ngDoCheck() {
     this.isFavoriteBtnDisabled = this.checkIfFavorite(this.palavra.word)
+  }
+
+  ngAfterContentInit(){
+    this.getAccessedWords()
+  }
+
+  getAccessedWords() {
+    this.wordService.getAccessedWords().subscribe(data => {
+      this.palavrasAcessadas = data.content
+      console.log(this.palavrasAcessadas)
+    });
   }
 
   getFavoriteWords() {
