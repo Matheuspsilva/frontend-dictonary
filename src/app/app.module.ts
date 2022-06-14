@@ -15,6 +15,8 @@ import { SearchTextComponent } from './components/search/search-text/search-text
 import { WordListComponent } from './components/wordList/word-list/word-list.component';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { TabsComponent } from './components/tabs/tabs.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export const appRouters: Routes = [
   { path: 'home', component: HomeComponent },
@@ -47,6 +49,8 @@ export const routes : ModuleWithProviders = RouterModule.forRoot(appRouters);
     routes,
     HttpInterceptorModule,
     TabsModule.forRoot(),
+    MatPaginatorModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

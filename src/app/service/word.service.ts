@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { isUndefined } from "util";
 import { AppConstants } from '../app-constants';
 
 @Injectable({
@@ -16,9 +17,12 @@ export class WordService {
     return this.http.get<any>(AppConstants.baseUrl + "entries/en/");
   }
 
-  getWordListParam(word : String): Observable<any>{
-    console.log(word)
-    return this.http.get<any>(AppConstants.baseUrl + "entries/en?search=" + word);
+  getWordListParam(word : String, page: String, size: String): Observable<any>{
+    return this.http.get<any>(AppConstants.baseUrl + "entries/en?search=" + word + "&page=" + page + "&limit=" + size);
+  }
+
+  getAllWordListParam( page: String, size: String): Observable<any>{
+    return this.http.get<any>(AppConstants.baseUrl + "entries/en?" + "page=" + page + "&limit=" + size);
   }
 
   getWord(word : String): Observable<any>{

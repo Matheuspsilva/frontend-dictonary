@@ -16,6 +16,7 @@
     "@angular/compiler": "~8.2.14",
     "@angular/core": "~8.2.14",
     "@angular/forms": "~8.2.14",
+    "@angular/material": "^8.2.3",
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
@@ -47,5 +48,18 @@
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
     "typescript": "~3.5.3"
-  }
+  },
+  "description": "Aplicativo frontend que consome api dictionary, utilizando como base a API Free Dictionary API. A partir desta api é possível favoritar palavras, manter e acessar o histórico de palavras e outras funcionalidades.",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matheuspsilva/frontend-dictonary.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matheuspsilva/frontend-dictonary/issues"
+  },
+  "homepage": "https://github.com/Matheuspsilva/frontend-dictonary#readme"
 }
